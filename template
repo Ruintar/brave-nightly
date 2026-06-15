@@ -26,8 +26,8 @@ do_install() {
     for size in 24 32 48 64 128 256; do
         mkdir -p ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps
 
-        mv ${DESTDIR}/opt/brave.com/brave-nightly/product_logo_${size}.png \
-           ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps/brave-browser-nightly.png
+        mv ${DESTDIR}/opt/brave.com/brave-nightly/product_logo_${size}_nightly.png \
+            ${DESTDIR}/usr/share/icons/hicolor/${size}x${size}/apps/brave-browser-nightly.png
     done
 
     # Remove the Debian/Ubuntu crontab
