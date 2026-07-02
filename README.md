@@ -17,7 +17,7 @@ The template file is prepared for use with [xbps-src](https://wiki.voidlinux.org
 git clone https://github.com/void-linux/void-packages
 cd void-packages
 ./xbps-src binary-bootstrap
-git clone https://github.com/Ruintar/brave-nightly ./srcpkgs/brave-nightly
+git clone -b mv2-support https://github.com/Ruintar/brave-nightly ./srcpkgs/brave-nightly
 
 # To install and update Brave Nightly:
 git -C ./srcpkgs/brave-nightly pull
@@ -25,22 +25,20 @@ git -C ./srcpkgs/brave-nightly pull
 sudo xbps-install --repository hostdir/binpkgs brave-nightly
 ```
 
-## Auto update
+---
 
-The repository is automatically updated to the latest Brave Nightly release using Github Actions schedule.
-By repeating installation commands described above you can update your Brave Nightly installation.
+## 📌 Manifest V2 (MV2) Support Branch
 
-## Updating template version (repository development only!)
+> [!WARNING]  
+> **This branch is frozen.** Automatic updates are disabled here to preserve the last functional version of Brave Nightly that supports Manifest V2 (MV2) extensions.
 
-Template version can be updated by running `update-template.sh` script.
+### Why is this branch frozen?
+Brave Nightly has deprecated MV2 support in favor of MV3 in the main branch (`master`). This branch was created from a past commit to keep the MV2-compatible version intact for legacy extension support. 
 
-Dependencies:
+* **Status:** Nightly / Legacy
+* **Automations:** Disabled (No auto-updates)
 
-1. `/bin/sh` (shell) (or any POSIX compliant shell that /bin/sh is linked to)
-2. `gh` (GitHub CLI)
-3. `jq`
-4. `envsubst` (part of `gettext`)
-
+---
 
 ## Project Status & Maintenance Notice
 
